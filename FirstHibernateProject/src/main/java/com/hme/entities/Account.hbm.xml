@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping package="com.hme.entities">
+	<class name="Account"> <!-- Here table attribute is not written ans table name and classname are same -->
+		<id name="accountNo">
+			<column name="Account_no" sql-type="numeric" not-null="true"/>
+		</id>
+		<property name="accountHolderName">
+			<column name="Account_Holder_Name" sql-type="varchar" length="10" not-null="true"/>
+		</property>
+		<property name="mobileNo">
+			<column name="mobile_no" sql-type="numeric" length="10" not-null="true"/>
+		</property>
+		<property name="email"> <!-- Here column attibute or separate tag is not written because class attribute name and column name are equal -->
+		</property>
+		<property name="accountType">
+			<column name="account_type" sql-type="varchar" length="10" not-null="true"/>
+		</property>
+		<property name="balance"/>
+	</class>
+</hibernate-mapping>
